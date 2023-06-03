@@ -4,12 +4,21 @@
     "baseUrl": ".",
     "module": "esnext",
     "target": "es5",
-    "lib": ["es5", "es6", "es7", "es2017", "dom", "es2019"],
+    "lib": [
+      "es5",
+      "es6",
+      "es7",
+      "es2017",
+      "dom",
+      "es2019"
+    ],
     "sourceMap": true,
     "allowJs": false,
     "jsx": "preserve",
     "moduleResolution": "node",
-    "rootDirs": ["."],
+    "rootDirs": [
+      "."
+    ],
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -33,21 +42,46 @@
       "@testing-library/jest-dom"
     ],
     "paths": {
-      "queries/*": ["src/queries/*"],
-      "cache/*": ["src/lib/api/cache/*"],
-      "components/*": ["src/components/*"],
-      "utils/*": ["src/utils/*"],
-      "pages/*": ["src/pages/*"],
-      "types/*": ["types/*"],
-      "contexts/*": ["src/contexts/*"],
-      "lib/*": ["src/lib/*"]
+      "queries/*": [
+        "src/queries/*"
+      ],
+      "cache/*": [
+        "src/lib/api/cache/*"
+      ],
+      "components/*": [
+        "src/components/*"
+      ],
+      "utils/*": [
+        "src/utils/*"
+      ],
+      "pages/*": [
+        "src/pages/*"
+      ],
+      "types/*": [
+        "types/*"
+      ],
+      "contexts/*": [
+        "src/contexts/*"
+      ],
+      "lib/*": [
+        "src/lib/*"
+      ]
     },
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "incremental": true
   },
-  "include": ["/**/*", "additional.d.ts"],
-  "exclude": ["node_modules", "build", "scripts", "dist"]
+  "include": [
+    "/**/*",
+    "additional.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "scripts",
+    "dist"
+  ]
 }

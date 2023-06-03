@@ -28,8 +28,6 @@ import {
 } from "utils/location-utils";
 
 import App from "next/app";
-import { CustomErrorPage } from "./_error";
-import { ErrorBoundary } from "@stefanprobst/next-error-boundary";
 import Head from "next/head";
 import OpenGraphMeta from "components/OpenGraphMeta";
 import { QueryParamProvider } from "components/QueryParamNextProvider";
@@ -169,7 +167,6 @@ function BobaBoardApp({
         )}
       </Head>
       <ToastContainer />
-      <ErrorBoundary fallback={<CustomErrorPage />}>
         <QueryParamProvider router={router}>
           <QueryClientProvider client={queryClient}>
             <Hydrate state={props.dehydratedState}>
@@ -198,7 +195,6 @@ function BobaBoardApp({
             </Hydrate>
           </QueryClientProvider>
         </QueryParamProvider>
-      </ErrorBoundary>
     </>
   );
 }
@@ -242,6 +238,7 @@ BobaBoardApp.getInitialProps = async (
     realmData
   );
   log(`Returning initial props`);
+	// @ts-ignore
   const appProps = await App.getInitialProps(appContext);
   return {
     serverHostname: ctx?.req?.headers?.host,
